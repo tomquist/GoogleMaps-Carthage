@@ -1,0 +1,88 @@
+name: GoogleMaps
+attributes:
+  ORGANIZATIONNAME: Google
+options:
+  bundleIdPrefix: com.google
+  deploymentTarget:
+    iOS: "9.0"
+  groupSortPosition: top
+  createIntermediateGroups: true
+targetTemplates:
+  Base:
+    type: framework
+    platform: iOS
+    scheme: {}
+    requiresObjCLinking: true
+    dependencies:
+    - sdk: CoreData.framework
+    - sdk: CoreGraphics.framework
+    - sdk: CoreLocation.framework
+    - sdk: CoreText.framework
+    - sdk: Foundation.framework
+    - sdk: QuartzCore.framework
+    - sdk: SystemConfiguration.framework
+    - sdk: UIKit.framework
+targets:
+  GoogleMapsBase:
+    templates:
+    - Base
+    info:
+      path: Base/Info.plist
+    settings:
+      base:
+        MODULEMAP_FILE: Base/Frameworks/GoogleMapsBase.framework/Modules/module.modulemap
+    sources:
+    - Base/Frameworks/GoogleMapsBase.framework/Headers
+    dependencies:
+    - framework: Base/Frameworks/GoogleMapsBase.framework
+      embed: false
+      link: true
+    - sdk: libc++.tbd
+    - sdk: libz.tbd
+    - sdk: Security.framework
+  GoogleMaps:
+    templates:
+    - Base
+    info:
+      path: Maps/Info.plist
+    settings:
+      base:
+        MODULEMAP_FILE: Maps/Frameworks/GoogleMaps.framework/Modules/module.modulemap
+    sources:
+    - Maps/Frameworks/GoogleMaps.framework/Headers
+    - Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle
+    dependencies:
+    - target: GoogleMapsBase
+    - framework: Maps/Frameworks/GoogleMapsCore.framework
+      embed: false
+      link: true
+    - framework: Maps/Frameworks/GoogleMaps.framework
+      embed: false
+      link: true
+    - sdk: libc++.tbd
+    - sdk: libz.tbd
+    - sdk: Accelerate.framework
+    - sdk: CoreImage.framework
+    - sdk: CoreTelephony.framework
+    - sdk: GLKit.framework
+    - sdk: ImageIO.framework
+    - sdk: OpenGLES.framework
+    - sdk: SystemConfiguration.framework
+    - sdk: UIKit.framework
+  GoogleMapsM4B:
+    templates:
+    - Base
+    info:
+      path: Maps/Info.plist
+    settings:
+      base:
+        MODULEMAP_FILE: M4B/Frameworks/GoogleMapsM4B.framework/Modules/module.modulemap
+    sources:
+    - Maps/Frameworks/GoogleMaps.framework/Headers
+    - Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle
+    dependencies:
+    - target: GoogleMapsBase
+    - target: GoogleMaps
+    - framework: M4B/Frameworks/GoogleMapsM4B.framework
+      embed: false
+      link: true
