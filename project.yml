@@ -86,3 +86,14 @@ targets:
     - framework: M4B/Frameworks/GoogleMapsM4B.framework
       embed: false
       link: true
+  GoogleMapsUtils:
+    type: framework
+    platform: iOS
+    scheme: {}
+    info:
+      path: Utils-Info.plist
+    sources:
+    - Utils/src
+    dependencies:
+    - target: GoogleMapsBase
+    - target: GoogleMaps

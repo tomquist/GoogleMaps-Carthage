@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2DBBE14DAE966F9E769F2DAE9E1389A1"
-               BuildableName = "GoogleMapsM4B.framework"
-               BlueprintName = "GoogleMapsM4B"
+               BlueprintIdentifier = "2E7D78B9E136B7EF2ED3A91DB254CA2A"
+               BuildableName = "GoogleMapsUtils.framework"
+               BlueprintName = "GoogleMapsUtils"
                ReferencedContainer = "container:GoogleMaps.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2DBBE14DAE966F9E769F2DAE9E1389A1"
-            BuildableName = "GoogleMapsM4B.framework"
-            BlueprintName = "GoogleMapsM4B"
+            BlueprintIdentifier = "2E7D78B9E136B7EF2ED3A91DB254CA2A"
+            BuildableName = "GoogleMapsUtils.framework"
+            BlueprintName = "GoogleMapsUtils"
             ReferencedContainer = "container:GoogleMaps.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,9 +56,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2DBBE14DAE966F9E769F2DAE9E1389A1"
-            BuildableName = "GoogleMapsM4B.framework"
-            BlueprintName = "GoogleMapsM4B"
+            BlueprintIdentifier = "2E7D78B9E136B7EF2ED3A91DB254CA2A"
+            BuildableName = "GoogleMapsUtils.framework"
+            BlueprintName = "GoogleMapsUtils"
             ReferencedContainer = "container:GoogleMaps.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -77,9 +77,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2DBBE14DAE966F9E769F2DAE9E1389A1"
-            BuildableName = "GoogleMapsM4B.framework"
-            BlueprintName = "GoogleMapsM4B"
+            BlueprintIdentifier = "2E7D78B9E136B7EF2ED3A91DB254CA2A"
+            BuildableName = "GoogleMapsUtils.framework"
+            BlueprintName = "GoogleMapsUtils"
             ReferencedContainer = "container:GoogleMaps.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
