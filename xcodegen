@@ -1,0 +1,11 @@
+#!/bin/sh
+
+rm Utils/GoogleMapsUtils.h
+for file in Utils/Submodule/src/**/*.h;
+do
+  basename=$(basename "${file}")
+  echo "#import <Google-Maps-iOS-Utils/${basename}>" >> Utils/GoogleMapsUtils.h
+done
+
+xcodegen
+

@@ -92,8 +92,29 @@ targets:
     scheme: {}
     info:
       path: Utils-Info.plist
+    settings:
+      base:
+        MODULEMAP_FILE: Utils/module.modulemap
+    preBuildScripts:
+      - script: |
+              for header in $SRCROOT/Utils/Submodule/src/**/*.h;
+              do
+                cp "${header}" "${header}.bak"
+                sed -i '' -E 's/#import (<|")Google-Maps-iOS-Utils\/([^>]+)(>|")/#import "\2"/g' ${header}
+              done
+        name: Fix header imports
+    postBuildScripts:
+      - script: |
+              for backup in $SRCROOT/Utils/Submodule/src/**/*.h.bak;
+              do
+                header=${backup%.bak}
+                mv ${backup} ${header}
+              done
+        name: Undo fix headers
     sources:
-    - Utils/src
+    - path: Utils/Submodule/src
+      name: GoogleMapsUtils
+    - Utils/GoogleMapsUtils.h
     dependencies:
     - target: GoogleMapsBase
     - target: GoogleMaps
