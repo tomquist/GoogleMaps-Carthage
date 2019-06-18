@@ -1104,7 +1104,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "for backup in $SRCROOT/Utils/Submodule/src/**/*.h.bak;\ndo\n  header=${backup%.bak}\n  echo \"Move ${backup} to ${header}\"\n  mv ${backup} ${header}\ndone\n";
+			shellScript = "for backup in $SRCROOT/Utils/Submodule/src/**/*.h.bak;\ndo\n  header=${backup%.bak}\n  mv ${backup} ${header}\ndone\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
